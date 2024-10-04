@@ -1,0 +1,272 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.1s linear;
+}
+
+body {
+  height: 100vh !important;
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #6dd5fa,
+    #2980b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #6dd5fa,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100vw;
+  height: 100vh !important;
+}
+
+/* Main canvas styles */
+#mainCanvas {
+  width: 70% !important;
+  height: auto;
+  border: 1px solid gray;
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 60% !important;
+  height: auto;
+  border: 1px solid gray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Custom height class */
+.h-80 {
+  height: 80vh !important;
+  background: #f0f2f0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000c40,
+    #151615
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000c40,
+    #374137
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Full width for form controls */
+.fullWidth {
+  width: 100% !important;
+}
+
+/* Style for input field */
+#textData {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Style for the Save button */
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for button */
+.btn-primary:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Flex container adjustments */
+.d-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button styling with new colors */
+.boton-elegante {
+  padding: 10px 10px;
+  border: 2px solid #2c2c2c;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  margin-left: 15px;
+  width: 110px; /* Increased button width slightly */
+  text-align: center;
+}
+
+.boton-elegante#Save {
+  background-color: #15b392; /* Green color for Save button */
+}
+
+.boton-elegante#clear {
+  background-color: #dc3545; /* Red color for Clear button */
+}
+
+.boton-elegante#download {
+  background-color: #007bff; /* Blue color for Download button */
+}
+
+.boton-elegante::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+  transform: scale(4);
+}
+
+.boton-elegante:hover {
+  border-color: #666666;
+  background: #292929;
+}
+
+/* Input styling improvements */
+input#textData {
+  margin-right: 15px;
+  height: 45px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid #ccc;
+}
+
+/* Specific hover tooltips for Uppercase, Lowercase, Bold, and Italic buttons */
+button#bold:hover::after {
+  content: "Bold";
+}
+
+button#italic:hover::after {
+  content: "Italic";
+}
+
+button#capital:hover::after {
+  content: "Uppercase";
+}
+
+button#small:hover::after {
+  content: "Lowercase";
+}
+
+/* Add a specific class to avoid applying to other buttons */
+button#bold:hover::after,
+button#italic:hover::after,
+button#capital:hover::after,
+button#small:hover::after {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  transform: translateY(-30px);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Avoid applying to other buttons like Save, Clear, and Download */
+button#save:hover::after,
+button#clear:hover::after,
+button#download:hover::after {
+  content: none;
+}
+
+/* Shape palette */
+.palette {
+  margin-left: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.palette button {
+  padding: 5px;
+}
+
+/* Contact Us Section */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 50px;
+  text-align: center;
+  max-width: 650px;
+  border-radius: 15px;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section label {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-section button {
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-section button:hover {
+  background-color: #555;
+}
